@@ -1,0 +1,52 @@
+.hero-tertiary {
+  padding: $padding;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  @media only screen and (max-width: 1250px) {
+    padding: $padding1250px;
+  }
+  @media only screen and (max-width: 1050px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 30rem 30rem;
+  }
+  @media only screen and (max-width: 600px) {
+    padding: 0;
+  }
+  &__text {
+    padding: 10rem 5rem;
+    background-color: $primary-peach;
+    background-image: url(../assets/about/desktop/bg-pattern-hero-about-desktop.svg);
+    border-radius: $radius 0 0 $radius;
+    color: $primary-white;
+    @media only screen and (max-width: 1050px) {
+      border-radius: 0 0 $radius $radius;
+      grid-row: 2 / 3;
+      padding: 3rem;
+      text-align: center;
+    }
+    @media only screen and (max-width: 600px) {
+      border-radius: 0;
+    }
+    .heading-1 {
+    }
+    .paragraph-main {
+      vertical-align: middle;
+    }
+  }
+
+  &__img {
+    background-image: url(../assets/about/desktop/image-about-hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 0 $radius $radius 0;
+    @media only screen and (max-width: 1050px) {
+      background-image: url(../assets/about/tablet/image-about-hero.jpg);
+      grid-row: 1 / 2;
+      border-radius: $radius $radius 0 0;
+    }
+    @media only screen and (max-width: 600px) {
+      border-radius: 0;
+    }
+  }
+}

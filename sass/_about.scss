@@ -1,0 +1,56 @@
+.about {
+  padding: $padding;
+  padding-bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 2rem;
+  text-align: center;
+  background-image: url(../assets/shared/desktop/bg-pattern-leaf.svg);
+  background-repeat: no-repeat;
+  background-position: bottom -25rem right;
+  @media only screen and (max-width: 1250px) {
+    padding: $padding1250px;
+  }
+  @media only screen and (max-width: 910px) {
+    row-gap: 5rem;
+    grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+  }
+  @media only screen and (max-width: 600px) {
+    row-gap: 5rem;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  }
+  @media only screen and (max-width: 500px) {
+    padding: $padding500px;
+  }
+
+  &__card {
+    &--img {
+      background-image: url(../assets/shared/desktop/bg-pattern-small-circle.svg);
+      background-repeat: no-repeat;
+    }
+
+    h3.heading-3 {
+      text-transform: uppercase;
+    }
+    p.paragraph-main {
+      @media only screen and (max-width: 910px) {
+        width: 70%;
+        margin: 0 auto;
+      }
+      @media only screen and (max-width: 600px) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.about-desc {
+  padding: $padding;
+
+  @media only screen and (max-width: 1250px) {
+    padding: $padding1250px;
+  }
+  @media only screen and (max-width: 500px) {
+    padding: $padding500px;
+  }
+}

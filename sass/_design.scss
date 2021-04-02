@@ -1,0 +1,52 @@
+.design {
+  padding: $padding;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 4rem;
+
+  @media only screen and (max-width: 1250px) {
+    padding: $padding1250px;
+  }
+  @media only screen and (max-width: 500px) {
+    padding: $padding500px;
+  }
+  &__card {
+    border-radius: $radius;
+    box-shadow: 2px 1px 20px rgba(0, 0, 0, 0.7);
+    &-img {
+      width: 100%;
+      height: auto;
+      border-radius: $radius $radius 0 0;
+    }
+
+    &-text {
+      background-color: #fdf3f0;
+      padding: 3rem;
+      border-radius: 0 0 $radius $radius;
+      text-align: center;
+      transition: all 0.5s ease;
+      cursor: pointer;
+      &:hover {
+        background-color: $primary-peach;
+        & .heading-3,
+        .paragraph-main {
+          color: $primary-white;
+        }
+      }
+      .heading-3 {
+        text-transform: uppercase;
+        color: $primary-peach;
+        transition: color 0.5s ease;
+      }
+
+      .paragraph-main {
+        color: $primary-black;
+        transition: color 0.5s ease;
+      }
+    }
+  }
+}
+
+main.main-design .features {
+  padding-bottom: 0;
+}

@@ -1,0 +1,46 @@
+.touch {
+  margin: $padding;
+  padding: 7rem 5rem;
+  border-radius: $radius;
+  background: url(../assets/shared/desktop/bg-pattern-call-to-action.svg),
+    rgba($primary-peach, 1);
+  background-repeat: no-repeat;
+  background-position: bottom -15rem right;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  transform: translateY(12rem);
+
+  @media only screen and (max-width: 1250px) {
+    margin: $padding1250px;
+  }
+  @media only screen and (max-width: 1050px) {
+    padding: 5rem;
+    text-align: center;
+  }
+  @media only screen and (max-width: 650px) {
+    padding: 3rem 1rem;
+    grid-template-columns: 1fr;
+  }
+  @media only screen and (max-width: 500px) {
+    margin: $padding500px;
+  }
+
+  &__text {
+    color: $primary-white;
+    width: 80%;
+    @media only screen and (max-width: 1050px) {
+      margin: 0 auto;
+    }
+  }
+
+  a.btn-main {
+    justify-self: end;
+    @media only screen and (max-width: 1050px) {
+      justify-self: center;
+    }
+  }
+}

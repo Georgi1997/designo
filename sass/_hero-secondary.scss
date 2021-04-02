@@ -1,0 +1,27 @@
+.hero-secondary {
+  margin: $padding;
+  padding: 7rem;
+  text-align: center;
+  background-color: $primary-peach;
+  background-image: url(../assets/web-design/desktop/bg-pattern-intro-web.svg);
+  border-radius: $radius;
+  @media only screen and (max-width: 1250px) {
+    margin: $padding1250px;
+  }
+  @media only screen and (max-width: 600px) {
+    margin: 0;
+    width: 100%;
+    border-radius: 0;
+  }
+  &__text {
+    color: $primary-white;
+
+    .paragraph-main {
+      width: 50%;
+      margin: 0 auto;
+      @media only screen and (max-width: 600px) {
+        width: 90%;
+      }
+    }
+  }
+}

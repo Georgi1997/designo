@@ -1,0 +1,76 @@
+.hero {
+  margin: $padding;
+  padding: 7rem;
+  min-height: 550px;
+  display: flex;
+  align-items: flex-start;
+  background-color: $primary-peach;
+  background-image: url(../assets/home/desktop/bg-pattern-hero-home.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+  border-radius: $radius;
+  position: relative;
+  overflow: hidden;
+
+  @media only screen and (max-width: 1250px) {
+    margin: $padding1250px;
+  }
+
+  @media only screen and (max-width: 950px) {
+    height: 800px;
+    padding: 3rem;
+  }
+  @media only screen and (max-width: 950px) {
+    height: 800px;
+    padding: 3rem;
+  }
+  @media only screen and (max-width: 600px) {
+    height: 94vh;
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  &__text {
+    width: 50%;
+    color: $primary-white;
+    @media only screen and (max-width: 950px) {
+      margin: 0 auto;
+      width: 80%;
+      text-align: center;
+    }
+    @media only screen and (max-width: 600px) {
+      margin: 0 auto;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  img {
+    position: absolute;
+    z-index: 1;
+    bottom: -25rem;
+    right: -5rem;
+
+    @media only screen and (max-width: 950px) {
+      right: 50%;
+      bottom: -40rem;
+      transform: translateX(50%);
+    }
+    @media only screen and (max-width: 600px) {
+      right: 50%;
+      bottom: -55rem;
+      transform: translateX(50%);
+    }
+    @media only screen and (max-width: 400px) {
+      right: 50%;
+      bottom: -70rem;
+      transform: translateX(50%);
+    }
+    @media only screen and (max-width: 320px) {
+      right: 50%;
+      bottom: -80rem;
+      transform: translateX(50%);
+    }
+  }
+}

@@ -1,0 +1,100 @@
+#section-features {
+}
+
+.features {
+  padding: $padding;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  @media only screen and (max-width: 1250px) {
+    padding: $padding1250px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+  @media only screen and (max-width: 500px) {
+    padding: $padding500px;
+  }
+
+  &__card {
+    border-radius: $radius;
+    background-repeat: no-repeat;
+    text-align: center;
+    background-size: cover;
+    color: $primary-white;
+    position: relative;
+    cursor: pointer;
+
+    &:hover::after {
+      opacity: 0.6;
+    }
+
+    &::after {
+      display: block;
+      content: "";
+      background-color: $primary-peach;
+      border-radius: $radius;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    &--1 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url(../assets/home/desktop/image-web-design-large.jpg);
+
+      grid-column: 1 / 2;
+      grid-row: 1 / span 2;
+      height: 64rem;
+      @media only screen and (max-width: 768px) {
+        grid-row: 1 / 2;
+        height: 30rem;
+      }
+    }
+    &--2 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url(../assets/home/desktop/image-app-design.jpg);
+      height: 30rem;
+    }
+    &--3 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url(../assets/home/desktop/image-graphic-design.jpg);
+      height: 30rem;
+    }
+
+    &--4 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url(../assets/home/desktop/image-web-design-large.jpg);
+      height: 30rem;
+    }
+
+    &--text {
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      h2.heading-2 {
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+      }
+    }
+  }
+  &__link {
+    &,
+    &:link,
+    &:visited {
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: $primary-white;
+      letter-spacing: 5px;
+    }
+    i {
+      color: $primary-peach;
+    }
+  }
+}

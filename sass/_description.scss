@@ -1,0 +1,106 @@
+.description {
+  padding: $padding;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+
+  @media only screen and (max-width: 1250px) {
+    padding: $padding1250px;
+  }
+  @media only screen and (max-width: 1050px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 350px auto;
+  }
+  @media only screen and (max-width: 600px) {
+    padding: 0;
+    border-radius: 0;
+  }
+
+  &-inverted {
+    grid-template-columns: 2fr 1fr;
+    @media only screen and (max-width: 1050px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 350px auto;
+    }
+
+    .description__text {
+      grid-column: 1 / 2;
+      border-radius: $radius 0 0 $radius;
+      @media only screen and (max-width: 1050px) {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        border-radius: 0 0 $radius $radius;
+      }
+      @media only screen and (max-width: 600px) {
+        border-radius: 0;
+      }
+    }
+    .description__img {
+      grid-column: 2 / 3;
+      border-radius: 0 $radius $radius 0;
+      @media only screen and (max-width: 1050px) {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        border-radius: $radius $radius 0 0;
+      }
+      @media only screen and (max-width: 600px) {
+        border-radius: 0;
+      }
+    }
+  }
+
+  &__text {
+    background-color: #fdf3f0;
+    background-image: url(../assets/shared/desktop/bg-pattern-two-circles.svg);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    padding: 10rem 5rem;
+    border-radius: 0 $radius $radius 0;
+    grid-column: 2 / 3;
+    @media only screen and (max-width: 1050px) {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      border-radius: 0 0 $radius $radius;
+    }
+    @media only screen and (max-width: 600px) {
+      border-radius: 0;
+    }
+    .heading-2 {
+      color: $secondary-peach;
+    }
+    .paragraph-main {
+      color: $primary-black;
+    }
+  }
+
+  &__img {
+    background-image: url(../assets/about/desktop/image-world-class-talent.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: $radius 0 0 $radius;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    @media only screen and (max-width: 1050px) {
+      background-image: url(../assets/about/tablet/image-world-class-talent.jpg);
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      border-radius: $radius $radius 0 0;
+    }
+    @media only screen and (max-width: 600px) {
+      border-radius: 0;
+      background-image: url(../assets/about/mobile/image-world-class-talent.jpg);
+    }
+
+    &--2 {
+      background-image: url(../assets/about/desktop/image-real-deal.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      @media only screen and (max-width: 1050px) {
+        background-image: url(../assets/about/tablet/image-real-deal.jpg);
+      }
+      @media only screen and (max-width: 600px) {
+        background-image: url(../assets/about/mobile/image-real-deal.jpg);
+      }
+    }
+  }
+}

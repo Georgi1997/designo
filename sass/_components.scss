@@ -1,0 +1,95 @@
+// Colors
+$primary-peach: #e7816b;
+$primary-black: #1d1c1e;
+$primary-white: #ffffff;
+
+$secondary-peach: #ffad9b;
+$secondary-dark-grey: #333136;
+$secondary-light-grey: #f1f3f5;
+
+h1.heading-1 {
+  font-size: 4.8rem;
+  line-height: 4.8rem;
+}
+h2.heading-2 {
+  font-size: 4rem;
+  line-height: 4.8rem;
+  letter-spacing: 2px;
+}
+h3.heading-3 {
+  font-size: 2rem;
+  line-height: 2.6rem;
+  letter-spacing: 5px;
+}
+p.paragraph-main {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+}
+
+// utilities
+.mg-bot-sm {
+  margin-bottom: 3rem;
+}
+
+.mg-bot-md {
+  margin-bottom: 5rem;
+}
+
+.mg-bot-lg {
+  margin-bottom: 7rem;
+}
+
+.mg-bot-xl {
+  margin-bottom: 10rem;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+}
+
+$radius: 30px;
+
+$padding: 6.5rem 16.5rem;
+
+$padding1250px: 4rem 6rem;
+$padding500px: 4rem 3rem;
+// buttons
+.btn {
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 1rem 2rem;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+  }
+  &-main {
+    color: $primary-black;
+    background-color: $primary-white;
+
+    &:hover,
+    &:active {
+      color: $primary-white;
+      background-color: rgba($primary-white, 0.4);
+    }
+  }
+  &-secondary {
+    color: $primary-white;
+    background-color: $primary-peach;
+
+    &:hover {
+      background-color: $secondary-peach;
+    }
+  }
+}
+
+nav.navbar {
+  position: relative;
+  z-index: 30000;
+}

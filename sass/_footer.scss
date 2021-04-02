@@ -1,0 +1,105 @@
+#section-footer {
+  background-color: $primary-black;
+}
+
+.footer {
+  padding: $padding;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  @media only screen and (max-width: 1250px) {
+    padding: $padding1250px;
+  }
+  &__nav {
+    padding: 7rem 0 3rem 0;
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+    border-bottom: 1px solid $secondary-dark-grey;
+
+    @media only screen and (max-width: 650px) {
+      flex-direction: column;
+    }
+  }
+  &__logo {
+    width: 15rem;
+    height: 2rem;
+    @media only screen and (max-width: 650px) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__list {
+    display: flex;
+    @media only screen and (max-width: 650px) {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  &__item {
+    padding: 0 1.5rem;
+    @media only screen and (max-width: 650px) {
+      padding: 1rem 0;
+    }
+  }
+
+  &__link {
+    &,
+    &:link,
+    &:visited {
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      color: $secondary-light-grey;
+      border-bottom: thin solid transparent;
+      transition: border-bottom 0.5s ease;
+      &:hover,
+      &:active {
+        border-bottom: thin solid $secondary-light-grey;
+      }
+    }
+  }
+
+  &__contacts {
+    padding-top: 3rem;
+
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+    @media only screen and (max-width: 650px) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    &--coordinates {
+      color: $primary-white;
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+      @media only screen and (max-width: 650px) {
+        margin-bottom: 5rem;
+      }
+    }
+    &--span {
+      &-highlight {
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__social {
+    i {
+      color: $primary-peach;
+      font-size: 2.2rem;
+      cursor: pointer;
+      transition: color 0.5s ease;
+      &:not(:last-of-type) {
+        margin-right: 1rem;
+      }
+      &:hover {
+        color: $secondary-peach;
+      }
+    }
+  }
+}

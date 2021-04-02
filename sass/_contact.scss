@@ -1,0 +1,102 @@
+.contact {
+  margin: $padding;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $primary-peach;
+  background-image: url(../assets/shared/desktop/bg-pattern-two-circles.svg);
+  background-repeat: no-repeat;
+  background-position: center left;
+  border-radius: $radius;
+
+  @media only screen and (max-width: 1250px) {
+    margin: $padding1250px;
+  }
+  @media only screen and (max-width: 1250px) {
+    flex-direction: column;
+  }
+  @media only screen and (max-width: 600px) {
+    margin: 0;
+    border-radius: 0;
+  }
+
+  &__text {
+    padding: 10rem 5rem;
+
+    color: $primary-white;
+    @media only screen and (max-width: 1000px) {
+      padding: 10rem 5rem 5rem;
+      text-align: center;
+    }
+  }
+  &__form-container {
+    padding: 10rem 5rem;
+    display: flex;
+    flex-direction: column;
+    @media only screen and (max-width: 1000px) {
+      padding: 5rem;
+      width: 100%;
+    }
+  }
+}
+.form {
+  &__group {
+    color: $primary-white;
+  }
+
+  &__input {
+    font-size: 1.5rem;
+
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid $primary-white;
+    width: 40rem;
+    padding: 2rem 1rem;
+    display: block;
+    font-family: inherit;
+    color: $primary-white;
+    transition: all 0.1s ease;
+    @media only screen and (max-width: 1250px) {
+      width: 100%;
+    }
+
+    &:focus {
+      outline: none;
+      border-bottom: 2px solid $primary-white;
+    }
+  }
+  &__input::placeholder {
+    color: currentColor;
+  }
+
+  &__input:placeholder-shown + &__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
+  }
+
+  &__label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    display: block;
+    transition: all 0.4s ease;
+  }
+}
+
+button.btn-tertiary {
+  font-family: inherit;
+  border: none;
+  background-color: $primary-white;
+  cursor: pointer;
+  display: block;
+  margin: 3rem 0 0 auto;
+
+  &:active,
+  &:hover {
+    outline: none;
+    color: $primary-white;
+    background-color: rgba($primary-white, 0.3);
+  }
+}
