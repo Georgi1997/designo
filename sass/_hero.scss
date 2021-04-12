@@ -62,14 +62,14 @@
       bottom: -55rem;
       transform: translateX(50%);
     }
-    @media only screen and (max-width: 400px) {
-      right: 50%;
-      bottom: -70rem;
-      transform: translateX(50%);
-    }
+    // @media only screen and (max-width: 400px) {
+    //   right: 50%;
+    //   bottom: -70rem;
+    //   transform: translateX(50%);
+    // }
     @media only screen and (max-width: 320px) {
       right: 50%;
-      bottom: -80rem;
+      bottom: -65rem;
       transform: translateX(50%);
     }
   }

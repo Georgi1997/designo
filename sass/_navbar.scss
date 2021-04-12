@@ -76,6 +76,7 @@
   width: 24px;
   height: 3px;
   background-color: $primary-black;
+  transition: all 0.5s ease;
 
   &:not(:first-of-type) {
     margin-top: 3px;
@@ -101,4 +102,18 @@
 
 .overlay.overlay-active {
   display: block;
+}
+
+//rotate menu burger
+
+.triggerAnim .line1 {
+  transform: rotate(-45deg) translate(-10px, 2px);
+}
+
+.triggerAnim .line2 {
+  opacity: 0;
+}
+
+.triggerAnim .line3 {
+  transform: rotate(45deg) translate(-5px, 0);
 }

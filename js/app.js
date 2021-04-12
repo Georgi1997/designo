@@ -5,4 +5,5 @@ const overlay = document.querySelector(".overlay");
 burger.addEventListener("click", () => {
   nav.classList.toggle("nav-active");
   overlay.classList.toggle("overlay-active");
+  burger.classList.toggle("triggerAnim");
 });

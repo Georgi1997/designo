@@ -153,7 +153,8 @@ nav.navbar {
 .burger div {
   width: 24px;
   height: 3px;
-  background-color: #1d1c1e; }
+  background-color: #1d1c1e;
+  transition: all 0.5s ease; }
   .burger div:not(:first-of-type) {
     margin-top: 3px; }
 
@@ -173,6 +174,15 @@ nav.navbar {
 
 .overlay.overlay-active {
   display: block; }
+
+.triggerAnim .line1 {
+  transform: rotate(-45deg) translate(-10px, 2px); }
+
+.triggerAnim .line2 {
+  opacity: 0; }
+
+.triggerAnim .line3 {
+  transform: rotate(45deg) translate(-5px, 0); }
 
 .hero {
   margin: 6.5rem 16.5rem;
@@ -232,15 +242,10 @@ nav.navbar {
         right: 50%;
         bottom: -55rem;
         transform: translateX(50%); } }
-    @media only screen and (max-width: 400px) {
-      .hero img {
-        right: 50%;
-        bottom: -70rem;
-        transform: translateX(50%); } }
     @media only screen and (max-width: 320px) {
       .hero img {
         right: 50%;
-        bottom: -80rem;
+        bottom: -65rem;
         transform: translateX(50%); } }
 
 .features {
